@@ -1,22 +1,22 @@
 {
   "name": "Paracelsin",
-  "version": "1.7.7",
+  "version": "1.8.0",
   "title": "Paracelsin",
   "author": "AndreusAxolotl",
   "homepage": "https://github.com/AndreusAxolotl/Paracelsin",
   "description": "Visit the frozen mountains of planet Paracelsin, where mining zinc is a race against clogging and freezing.",
-  "factorio_version": "2.0",
+  "factorio_version": "2.1",
   "dependencies": [
-    "base >= 2.0.50",
-    "space-age >= 2.0.50",
-    "Paracelsin-Graphics = 1.7.7",
+    "base",
+    "space-age",
+    "Paracelsin-Graphics = 1.8.0",
     "PlanetsLib",
-    "elevated-pipes",
+    "+ elevated-pipes",
     "SolarMatrix",
     "Accumulator-V2",
     "? space_age_galore",
     "? aai-industry",
-    "? canal-excavator >= 1.12"
+    "? canal-excavator"
 ],
 "space_travel_required": true
 }
