@@ -733,8 +733,11 @@ data:extend{
       type = "electric",
       usage_priority = "secondary-output"
     },
-    horizontal_animation =
+    two_direction_only = true,
+    pictures =
     {
+      north = {
+        animation = {
       layers = {
               {
                 filename = "__Paracelsin-Graphics__/graphics/entity/cryovolcanic-turbine/cryovolcanic-turbine-shadow.png",
@@ -759,9 +762,10 @@ data:extend{
               },
             },
           },
-    vertical_animation =
-    {
-     layers = {
+        },
+        east = {
+        animation = {
+      layers = {
               {
                 filename = "__Paracelsin-Graphics__/graphics/entity/cryovolcanic-turbine/cryovolcanic-turbine-shadow.png",
                 size = {400, 350},
@@ -784,7 +788,9 @@ data:extend{
                 animation_speed = 1,
               },
             },
-    },
+          },
+        },
+          },
     impact_category = "metal-large",
     open_sound = sounds.machine_open,
     close_sound = sounds.machine_close,
