@@ -52,7 +52,7 @@ data:extend {
     research_trigger =
     {
       type = "mine-entity",
-      entity = "crashed-fulgoran-pod"
+      entities = {"crashed-fulgoran-pod"}
     }
   },
   {
@@ -87,7 +87,7 @@ data:extend {
     research_trigger =
     {
       type = "mine-entity",
-      entity = "big-metallic-rock"
+      entities = {"big-metallic-rock"}
     }
   },
   {
@@ -106,7 +106,7 @@ data:extend {
     research_trigger =
     {
       type = "mine-entity",
-      entity = "vaterite"
+      entities = {"vaterite"}
     }
   },
   {
@@ -133,7 +133,7 @@ data:extend {
     research_trigger =
     {
       type = "mine-entity",
-      entity = "sphalerite"
+      entities = {"sphalerite"}
     }
   },
   {
@@ -160,7 +160,7 @@ data:extend {
     research_trigger =
     {
       type = "mine-entity",
-      entity = "tetrahedrite"
+      entities = {"tetrahedrite"}
     }
   },
   {
@@ -552,6 +552,7 @@ data:extend {
     }
   },
 }
+if mods["elevated-pipes"] then
 data.raw.technology["elevated-pipe"].prerequisites = { "galvanized-steel" }
 data.raw.technology["elevated-pipe"].unit =
 {
@@ -574,6 +575,8 @@ data.raw.technology["elevated-pipe"].effects =
     recipe = "elevated-pipe"
   },
 }
+end
+
 data.raw.technology["solar-matrix"].prerequisites = { "galvanized-steel" }
 data.raw.technology["solar-matrix"].unit =
 {

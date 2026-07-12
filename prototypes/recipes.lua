@@ -1,8 +1,4 @@
 data:extend{
-    {
-    type = "recipe-category",
-    name = "hand-crafting",
-  },
 {
     type = "recipe",
     name = "nitrogen-nitric-acid",
@@ -17,9 +13,9 @@ data:extend{
         {type = "fluid", name = "nitric-acid", amount = 50}
     },
     allow_productivity = true,
-    category = "chemistry",
+    categories = {"chemistry"},
     auto_recycle = true,
-    show_amount_in_title = false,
+    
     crafting_machine_tint =
     {
         primary = {r = 0.14, g = 0.07, b = 0.09, a = 1.000},
@@ -46,9 +42,9 @@ data:extend{
         {type = "item", name = "plastic-bar", amount = 2}
     },
     allow_productivity = true,
-    category = "chemistry",
+    categories = {"chemistry"},
     auto_recycle = true,
-    show_amount_in_title = false,
+    
     crafting_machine_tint =
     {
       primary = {r = 1.000, g = 1.000, b = 1.000, a = 1.000}, 
@@ -76,9 +72,9 @@ data:extend{
         {type = "item", name = "rocket-fuel", amount = 1}
     },
     allow_productivity = true,
-    category = "chemistry",
+    categories = {"chemistry"},
     auto_recycle = false,
-    show_amount_in_title = false,
+    
     crafting_machine_tint =
     {
       primary = {r = 0.996, g = 0.742, b = 0.408, a = 1.000},
@@ -106,10 +102,9 @@ data:extend{
         {type = "item", name = "processing-unit", amount = 1}
     },
     allow_productivity = true,
-    category = "electromagnetics",
-    additional_categories = {"electrochemistry"},
+    categories = {"electromagnetics", "electrochemistry"},
     auto_recycle = false,
-    show_amount_in_title = false,
+    
 },
 {
     type = "recipe",
@@ -130,10 +125,9 @@ data:extend{
         {type = "item", name = "battery", amount = 1}
     },
     allow_productivity = true,
-    category = "cryogenics",
-    additional_categories = {"electrochemistry"},
+    categories = {"cryogenics", "electrochemistry"},
     auto_recycle = false,
-    show_amount_in_title = false,
+    
 },
 {
     type = "recipe",
@@ -152,9 +146,9 @@ data:extend{
         {type = "fluid", name = "lubricant", amount = 20}
     },
     allow_productivity = true,
-    category = "electrochemistry",
+    categories = {"electrochemistry"},
     auto_recycle = false,
-    show_amount_in_title = false,
+    
 },
 {
     type = "recipe",
@@ -173,9 +167,9 @@ data:extend{
         {type = "item", name = "solid-fuel", amount = 2}
     },
     allow_productivity = true,
-    category = "chemistry",
+    categories = {"chemistry"},
     auto_recycle = true,
-    show_amount_in_title = false,
+    
     crafting_machine_tint =
     {
         primary = {r = 0.40, g = 0.55, b = 0.71, a = 1.000},
@@ -204,9 +198,9 @@ data:extend{
     },
     allow_productivity = true,
     allow_quality = false,
-    category = "metallurgy",
+    categories = {"metallurgy"},
     auto_recycle = true,
-    show_amount_in_title = false,
+    
     surface_conditions = {{property = "pressure", min = 5300, max = 5300}},
 },
 {
@@ -229,9 +223,9 @@ data:extend{
     },
     allow_productivity = true,
     allow_quality = false,
-    category = "chemistry",
+    categories = {"chemistry"},
     auto_recycle = true,
-    show_amount_in_title = false,
+    
     surface_conditions = {{property = "pressure", min = 5300, max = 5300}},
     crafting_machine_tint =
     {
@@ -261,9 +255,9 @@ data:extend{
     },
     allow_productivity = true,
     allow_quality = false,
-    category = "metallurgy",
+    categories = {"metallurgy"},
     auto_recycle = true,
-    show_amount_in_title = false,
+    
     surface_conditions = {{property = "pressure", min = 5300, max = 5300}},
 },
 {
@@ -286,9 +280,9 @@ data:extend{
     },
     allow_productivity = true,
     allow_quality = false,
-    category = "chemistry",
+    categories = {"chemistry"},
     auto_recycle = true,
-    show_amount_in_title = false,
+    
     surface_conditions = {{property = "pressure", min = 5300, max = 5300}},
     crafting_machine_tint =
     {
@@ -317,9 +311,9 @@ data:extend{
     },
     allow_productivity = true,
     allow_quality = false,
-    category = "chemistry",
+    categories = {"chemistry"},
     auto_recycle = true,
-    show_amount_in_title = false,
+    
 },
 {
     type = "recipe",
@@ -340,9 +334,9 @@ data:extend{
     },
     allow_productivity = true,
     allow_quality = false,
-    category = "chemistry",
+    categories = {"chemistry"},
     auto_recycle = true,
-    show_amount_in_title = false,
+    
     surface_conditions = {{property = "pressure", min = 5300, max = 5300}},
     crafting_machine_tint =
     {
@@ -372,9 +366,9 @@ data:extend{
     },
     allow_productivity = false,
     allow_quality = false,
-    category = "chemistry",
+    categories = {"chemistry"},
     auto_recycle = true,
-    show_amount_in_title = false,
+    
     surface_conditions = {{property = "pressure", min = 5300, max = 5300}},
     crafting_machine_tint =
     {
@@ -400,15 +394,15 @@ data:extend{
     },
     allow_productivity = true,
     allow_quality = false,
-    category = "metallurgy",
+    categories = {"metallurgy"},
     auto_recycle = true,
-    show_amount_in_title = false,
+    
     surface_conditions = {{property = "pressure", min = 5300, max = 5300}},
 },
 {
     type = "recipe",
     name = "zinc-plate",
-    category = "smelting",
+    categories = {"smelting"},
     auto_recycle = false,
     energy_required = 3.2,
     ingredients = {{type = "item", name = "zinc", amount = 1}},
@@ -432,10 +426,9 @@ data:extend{
         {type = "item", name = "zinc-rivets", amount = 10},
     },
     allow_productivity = true,
-    category = "mechanics",
-    additional_categories = {"hand-crafting"},
+    categories = {"mechanics","hand-crafting"},
     auto_recycle = true,
-    show_amount_in_title = false,
+    
 },
 {
     type = "recipe",
@@ -452,10 +445,9 @@ data:extend{
         {type = "item", name = "zinc-solder", amount = 4},
     },
     allow_productivity = true,
-    category = "electrochemistry",
-    additional_categories = {"hand-crafting"},
+    categories = {"electrochemistry", "hand-crafting"},
     auto_recycle = true,
-    show_amount_in_title = false,
+    
 },
 {
     type = "recipe",
@@ -475,9 +467,9 @@ data:extend{
         {type = "item", name = "electric-coil", amount = 1},
     },
     allow_productivity = true,
-    category = "mechanics",
+    categories = {"mechanics"},
     auto_recycle = true,
-    show_amount_in_title = false,
+    
 },
 {
     type = "recipe",
@@ -496,9 +488,9 @@ data:extend{
         {type = "item", name = "galvanization-science-pack", amount = 1},
     },
     allow_productivity = true,
-    category = "electrochemistry",
+    categories = {"electrochemistry"},
     auto_recycle = true,
-    show_amount_in_title = false,
+    
     surface_conditions = {{property = "pressure", min = 5300, max = 5300}},
 },
 {
@@ -518,9 +510,9 @@ data:extend{
         {type = "item", name = "advanced-repair-device", amount = 2},
     },
     allow_productivity = false,
-    category = "mechanics",
+    categories = {"mechanics"},
     auto_recycle = false,
-    show_amount_in_title = false,
+    
 },
 {
     type = "recipe",
@@ -539,9 +531,9 @@ data:extend{
         {type = "item", name = "galvanized-steel-plate", amount = 5},
     },
     allow_productivity = true,
-    category = "metallurgy",
+    categories = {"metallurgy"},
     auto_recycle = false,
-    show_amount_in_title = false,
+    
 },
 {
     type = "recipe",
@@ -559,9 +551,9 @@ data:extend{
         {type = "item", name = "vaterite", amount_min = 1, amount_max = 10,},
     },
     allow_productivity = true,
-    category = "electrochemistry",
+    categories = {"electrochemistry"},
     auto_recycle = true,
-    show_amount_in_title = false,
+    
     surface_conditions = {{property = "pressure", min = 5300, max = 5300}},
 },
 }

@@ -40,7 +40,7 @@ function generate_macerating_recipe_icons_from_item(item)
       {
         icon = item.icon,
         icon_size = item.icon_size,
-        scale = (0.5 * defines.default_icon_size / (item.icon_size or defines.default_icon_size)) * 0.8,
+        scale = (0.5 * defines.constant.default_icon_size / (item.icon_size or defines.constant.default_icon_size)) * 0.8,
       },
       {
         icon = "__Paracelsin-Graphics__/graphics/icons/macerating.png",
@@ -55,7 +55,7 @@ function generate_macerating_recipe_icons_from_item(item)
     }
     for i = 1, #item.icons do
       local icon = table.deepcopy(item.icons[i]) -- we are gonna change the scale, so must copy the table
-      icon.scale = ((icon.scale == nil) and (0.5 * defines.default_icon_size / (icon.icon_size or defines.default_icon_size)) or icon.scale) * 0.8
+      icon.scale = ((icon.scale == nil) and (0.5 * defines.constant.default_icon_size / (icon.icon_size or defines.constant.default_icon_size)) or icon.scale) * 0.8
       icon.shift = util.mul_shift(icon.shift, 0.8)
       icons[#icons + 1] = icon
     end
@@ -79,7 +79,7 @@ local function generate_macerating_recipe(item)
       icon = nil,
       icons = icons,
       subgroup = item.subgroup,
-      category = "macerating",
+      categories = {"macerating"},
       hidden = true,
       enabled = true,
       unlock_results = false,

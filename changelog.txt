@@ -1,4 +1,20 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.8.1
+Date: 2026-06-26
+  If you're invisible why can't i beat you?:
+
+  Fixes:
+    - Fixed the Cryovolcanic Turbine not rendering.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.8.0
+Date: 2026-06-26
+  2.1 baby:
+
+  Changes:
+    - Updated Mod to 2.1.
+    - Elevated pipes is now a reccomended dependency and not a normal one.
+---------------------------------------------------------------------------------------------------
 Version: 1.7.7
 Date: 2026-06-05
   Menu sims:

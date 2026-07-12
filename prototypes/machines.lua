@@ -1,7 +1,8 @@
 require ("util")
 require("__base__/prototypes/entity/pipecovers")
 require ("circuit-connector-sprites")
-require("__base__/prototypes/entity/assemblerpipes")
+local assembler_pictures = require("__base__.prototypes.entity.assembler-pictures")
+local pipe_picture = assembler_pictures.assembler3pipepictures
 local hit_effects = require("__base__/prototypes/entity/hit-effects")
 local sounds = require("__base__/prototypes/entity/sounds")
 local movement_triggers = require("__base__/prototypes/entity/movement-triggers")
@@ -242,7 +243,7 @@ data:extend{
     allow_productivity = false,
     surface_conditions = {{property = "pressure", min = 5300, max = 5300}},
     main_product = "electrochemical-plant",
-    category = "pressing",
+    categories = {"crafting", "metallurgy", "mechanics"},
     auto_recycle = true
 },
 {
@@ -262,7 +263,7 @@ data:extend{
     allow_productivity = false,
     surface_conditions = {{property = "pressure", min = 5300, max = 5300}},
     main_product = "mechanical-plant",
-    category = "pressing",
+    categories = {"crafting", "metallurgy", "mechanics"},
     auto_recycle = true
 },
 {
@@ -281,7 +282,7 @@ data:extend{
     },
     allow_productivity = false,
     main_product = "cryovolcanic-turbine",
-    category = "pressing",
+    categories = {"crafting", "metallurgy", "mechanics"},
     auto_recycle = true
 },
 {
@@ -300,7 +301,7 @@ data:extend{
     },
     allow_productivity = false,
     main_product = "burner-pumpjack",
-    category = "pressing",
+    categories = {"crafting", "metallurgy", "mechanics"},
     auto_recycle = true
 },
   {
@@ -314,7 +315,8 @@ data:extend{
       {type = "item", name = "electric-coil", amount = 10}
     },
     energy_required = 20,
-    results = {{type="item", name="macerator", amount=1}}
+    results = {{type="item", name="macerator", amount=1}},
+    categories = {"crafting", "metallurgy", "mechanics"},
   },
     {
         name = "electrochemical-plant",
@@ -535,7 +537,7 @@ data:extend{
         circuit_connector = circuit_connector_definitions["mechanical-plant"],
         collision_box = {{-1.6, -1.6}, {1.6, 1.6}},
         selection_box = {{-2, -2}, {2, 2}},
-        crafting_categories = {"mechanics", "pressing"},
+        crafting_categories = {"mechanics"},
         fluid_boxes = {
             {
                 production_type = "input",
@@ -731,8 +733,11 @@ data:extend{
       type = "electric",
       usage_priority = "secondary-output"
     },
-    horizontal_animation =
+    two_direction_only = true,
+    pictures =
     {
+      north = {
+        animation = {
       layers = {
               {
                 filename = "__Paracelsin-Graphics__/graphics/entity/cryovolcanic-turbine/cryovolcanic-turbine-shadow.png",
@@ -757,9 +762,10 @@ data:extend{
               },
             },
           },
-    vertical_animation =
-    {
-     layers = {
+        },
+        east = {
+        animation = {
+      layers = {
               {
                 filename = "__Paracelsin-Graphics__/graphics/entity/cryovolcanic-turbine/cryovolcanic-turbine-shadow.png",
                 size = {400, 350},
@@ -782,7 +788,9 @@ data:extend{
                 animation_speed = 1,
               },
             },
-    },
+          },
+        },
+          },
     impact_category = "metal-large",
     open_sound = sounds.machine_open,
     close_sound = sounds.machine_close,

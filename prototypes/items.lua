@@ -219,7 +219,7 @@ data:extend{
     default_import_location = "paracelsin",
     weight = 4000,
 },
-{type = "tool",
+{type = "item",
     name = "galvanization-science-pack",
     localised_description = {"item-description.science-pack"},
     icon = "__Paracelsin-Graphics__/graphics/icons/galvanization-science-pack.png",
@@ -232,10 +232,6 @@ data:extend{
     stack_size = 200,
     default_import_location = "paracelsin",
     weight = 1*kg,
-    durability = 1,
-    durability_description_key = "description.science-pack-remaining-amount-key",
-    factoriopedia_durability_description_key = "description.factoriopedia-science-pack-remaining-amount-key",
-    durability_description_value = "description.science-pack-remaining-amount-value",
     random_tint_color = item_tints.bluish_science
 },
 {
